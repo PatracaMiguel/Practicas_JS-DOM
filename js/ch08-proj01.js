@@ -18,7 +18,7 @@ for (let i = 0; i < cart.length; i++) {
 let impuesto = subtotales * TAX;
 let costoEnvio = 0;
 
-if (subtotales <= SHIPPING) {
+if (subtotales < SHIPPING) {
     costoEnvio = COSTO_DE_ENVIO;
 }
 
