@@ -1,6 +1,6 @@
 
-const tax_rate = parseFloat(prompt('Enter tax rate (0.10)'));
-const shipping_threshold = parseFloat(prompt('Enter shipping threshold (1000)'));
+const TAX = parseFloat(prompt('Enter tax rate (0.10)'));
+const SHIPPING = parseFloat(prompt('Enter shipping threshold (1000)'));
 const COSTO_DE_ENVIO = 40;
 
 /* add loop and other code here ... in this simple exercise we are not
@@ -15,10 +15,10 @@ for (let i = 0; i < cart.length; i++) {
     outputCartRow(item, subtotal);
 }
 
-let impuesto = subtotales * tax_rate;
+let impuesto = subtotales * TAX;
 let costoEnvio = 0;
 
-if (subtotales <= shipping_threshold) {
+if (subtotales <= SHIPPING) {
     costoEnvio = COSTO_DE_ENVIO;
 }
 
