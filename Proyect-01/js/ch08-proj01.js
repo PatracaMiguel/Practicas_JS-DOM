@@ -1,4 +1,3 @@
-
 const TAX = parseFloat(prompt('Enter tax rate (0.10)'));
 const SHIPPING = parseFloat(prompt('Enter shipping threshold (1000)'));
 const COSTO_DE_ENVIO = 40;
@@ -23,22 +22,3 @@ if (subtotales < SHIPPING) {
 }
 
 let grandTotal = subtotales + impuesto + costoEnvio;
-
-document.write(`
-    <tr class="totals">
-        <td colspan="4">Subtotal</td>
-        <td>$${subtotales.toFixed(2)}</td>
-    </tr>
-    <tr class="totals">
-        <td colspan="4">Tax</td>
-        <td>$${impuesto.toFixed(2)}</td>
-    </tr>
-    <tr class="totals">
-        <td colspan="4">Shipping</td>
-        <td>$${costoEnvio.toFixed(2)}</td>
-    </tr>
-    <tr class="totals">
-        <td colspan="4" class="focus">Grand Total</td>
-        <td class="focus">$${grandTotal.toFixed(2)}</td>
-    </tr>
-`);
